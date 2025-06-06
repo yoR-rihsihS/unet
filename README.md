@@ -1,6 +1,6 @@
 # UNet
-PyTroch Implementation of UNet.
-Comment: Due to memory constraints I have used different number of input/output channels as compared to the original paper.
+PyTorch implementation of UNet.
+Comment: Due to memory constraints, UNet is defined using different number of input/output channels as compared to the original paper.
 
 ## Generating Masks from Annotations :
 - Download "gtFine_trainvaltest.zip" and "leftImg8bit_trainvaltest.zip" from the [official cityscapes website](https://www.cityscapes-dataset.com/downloads/) and extract them in [data/](./data/).
@@ -20,22 +20,22 @@ Project/
 │   ├── leftImg8bit
 │   ├── gtFine
 │   └── ... (other files from dataset)
-├── deeplabv3/
-│   └── ... (python scripts for deeplabv3 model and utils)
+├── unet/
+│   └── ... (python scripts for UNet model and utils)
 ├── outputs/
 │   └── ... (output directory)
 ├── saved/
 │   └── ... (save directory during training)
 ├── save_predictions.ipynb
-├── test_dlv3.py
-├── train_dlv3.py
+├── test_unet.py
+├── train_unet.py
 ├── visualize_training.ipynb
 └── ... (other files from project)
 ```
 
 
 ## Training
-- Run the following command to train DeepLabV3 model:
+- Run the following command to train UNet model:
 ```
 python train_unet.py
 ```
@@ -60,7 +60,7 @@ Comment: The above plots are generated using [visualize_training.ipynb](visualiz
 
 
 ## Performance
-- Run the following command to evaluate DeepLabV3 model on test sets:
+- Run the following command to evaluate UNet model on test set:
 ```
 python test_unet.py --model_weights_path "./saved/{file_name}.pth"
 ```
@@ -91,5 +91,5 @@ Comment: The code saves all the predictions in the directory [outputs/unet/](./o
 ![Average Inference time of UNet Model](./outputs/inf.png)
 
 Comment:
-- UNet Model requires 15.7 GB VRAM for inference on complete image of size 1024 x 2048.
-- UNet Model takes about 0.16 seconds for inference on complete image of size 1024 x 2048.
+- UNet Model (pid=3994260) requires 5.1 GB VRAM for inference on complete image of size 1024 x 2048.
+- UNet Model takes about 0.14 seconds for inference on complete image of size 1024 x 2048.
