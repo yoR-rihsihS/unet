@@ -3,6 +3,8 @@ PyTorch implementation of UNet.
 
 Comment: Due to memory constraints, UNet is defined using different number of input/output channels as compared to the original paper.
 
+Download trained model weights from [here](https://drive.google.com/drive/folders/1ZR9svn9aiiVfMIOQ8kJ_ohvcQplOk4qK?usp=sharing).
+
 ## Generating Masks from Annotations :
 - Download "gtFine_trainvaltest.zip" and "leftImg8bit_trainvaltest.zip" from the [official cityscapes website](https://www.cityscapes-dataset.com/downloads/) and extract them in [data/](./data/).
 - Run [generate_gt.py](./cityscapes/generate_gt.py), it will generate masks (trainId mask, labelId mask, color mask) as per the conventions of CityScapes Dataset and save them in appropriate directory.
