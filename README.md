@@ -1,6 +1,6 @@
 # UNet
 PyTroch Implementation of UNet.
-
+Comment: Due to memory constraints I have used different number of input/output channels as compared to the original paper.
 
 ## Generating Masks from Annotations :
 - Download "gtFine_trainvaltest.zip" and "leftImg8bit_trainvaltest.zip" from the [official cityscapes website](https://www.cityscapes-dataset.com/downloads/) and extract them in [data/](./data/).
